@@ -1,0 +1,41 @@
+{
+  "User": [
+    {
+      "id": "940b"
+    },
+    {
+      "id": "4d2b",
+      "username": "tirth",
+      "email": "tirth@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "32ee"
+    },
+    {
+      "id": "e391"
+    },
+    {
+      "id": "b28e"
+    },
+    {
+      "id": "d3cc",
+      "email": "tirth@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "e161",
+      "email": "tirth@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "7bd2",
+      "email": "tirth@gmail.com",
+      "password": "111"
+    },
+    {
+      "id": "8ac1"
+    }
+  ],
+  "Products": []
+}

@@ -1,0 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.banner-section{
+    background-image: url(../img/banner_3.71b74319.jpg);
+}

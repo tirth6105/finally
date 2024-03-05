@@ -1,0 +1,18 @@
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #feddc8;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 25px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.link:hover{
+    color: #f79837;
+    transition: all 0.5s;
+}
