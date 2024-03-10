@@ -1,4 +1,4 @@
-import { LOGIN, SIGNUP } from "../Actiontype"
+import { LOGIN, LOGOUT, SIGNUP } from "../Actiontype"
 
 
 let initialState ={
@@ -20,6 +20,13 @@ export const User=(state=initialState , {type,payload})=>{
                 ...state,
                 UserData: payload,
                 isLogin: true
+            }
+
+        case LOGOUT:
+            return{
+                ...state,
+                UserData: {},
+                isLogin:false
             }
             default : return state
     }

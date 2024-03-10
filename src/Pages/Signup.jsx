@@ -16,12 +16,13 @@ const Signup = () => {
     }
 
   return (
-    <div>
+    <div className='text-center pt-5'>
+      <h1 className=' fs-5 text-uppercase fw-semibold'>SIGNUP</h1>
         <form onSubmit={handlesubmit}>
-            <input type="text" placeholder='Username' value={username} onChange={(e)=>setUsername(e.target.value)} />
-            <input type="email" placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)} />
-            <input type="password" placeholder='Password' value={password} onChange={(e)=>setPassword(e.target.value)} />
-            <input type="submit" />
+            <input type="text" placeholder='Username' value={username} onChange={(e)=>setUsername(e.target.value)} className=' my-3 border-white border-1 col-12 p-2  rounded' style={{width:"30%"}} /><br />
+            <input type="email" placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)} className=' my-2 border-white border-1 col-12 p-2  rounded' style={{width:"30%"}} /><br />
+            <input type="password" placeholder='Password' value={password} onChange={(e)=>setPassword(e.target.value)} className=' my-3 border-white border-1 col-12 p-2  rounded' style={{width:"30%"}} /><br />
+            <input type="submit" className='btn btn-secondary col-12 mx-auto py-2' style={{width:"30%"}} />
         </form>
     </div>
   )

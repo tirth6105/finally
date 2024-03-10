@@ -1,5 +1,5 @@
 import axios from "axios"
-import { ADD_PRODUCT, DELET, EDIT, GET, LOGIN, SIGNUP } from "./Actiontype"
+import { ADD_PRODUCT, DELET, EDIT, GET, LOGIN, LOGOUT, SIGNUP } from "./Actiontype"
 
 export const signup=(data)=>async(dipatch)=>{
     let res =await axios.post("http://localhost:8090/User",data)
@@ -11,10 +11,21 @@ export const signup=(data)=>async(dipatch)=>{
 }
 
 export const login=(data)=>async(dipatch)=>{
-    let res =await axios.get(`http://localhost:8090/User?email=${data.email}&password=${data.password}`,data)
-    return{
+    let res =await axios.get(`http://localhost:8090/User?email=${data.email}&password=${data.password}`)
+
+    console.log(res.data[0]);
+
+
+    dipatch({
         type:LOGIN,
-        payload:res.data
+        payload:res.data[0]
+    }
+    )
+}
+
+export const logout=()=>{
+    return{
+        type : LOGOUT,
     }
 }
 
@@ -34,18 +45,20 @@ export const get =()=>async(dispatch)=>{
     })
 }
 
-export const edit = (id)=> async(dispatch)=>{
-    let res = await axios.patch(`http://localhost:8090/Products/${id}`);
+export const edit = (data)=> async(dispatch)=>{
+    let res = await axios.patch(`http://localhost:8090/Products/${data.id}`,data);
+
+    console.log(res.data,data);
     dispatch({
         type:EDIT,
-        payload:id
+        payload:res.data
     })
 }
 
-export const delet = (id)=> async(dispatch)=>{
-    let res = await axios.delete(`http://localhost:8090/Products/${id}`);
+export const delet = (ele)=> async(dispatch)=>{
+    let res = await axios.delete(`http://localhost:8090/Products/${ele}`);
     dispatch({
         type:DELET,
-        payload:id
+        payload:ele
     })
 }
